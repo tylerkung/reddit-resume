@@ -1,0 +1,166 @@
+body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #369;
+    &:focus, &:hover{
+        text-decoration: none;
+        color: #369;
+    }
+}
+p{
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    background-color: #cee3f8;
+    border-bottom: 1px solid #5f99cf;
+    position: relative;
+    z-index: 99;
+    .sr-header{
+        background-color: #f0f0f0;
+        text-transform: uppercase;
+        border-bottom: 1px solid gray;
+        height: 18px;
+        line-height: 18px;
+    }
+    .left-header{
+        .header-img{
+            height: 40px;
+            width: 120px;
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+    }
+    .right-header{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        background-color: #eff7ff;
+        padding: 4px;
+        line-height: 12px;
+        border-top-left-radius: 7px;
+        font-size: 10px;
+        .karma{
+            color: gray;
+            font-weight: bold;
+        }
+    }
+
+    .divider{
+        color: gray;
+        margin: 0px 2px;
+    }
+}
+
+.content{
+    margin: 7px 15px 0px;
+}
+
+.post{
+    .rank, .vote, .thumb, .post-content{
+        float: left;
+    }
+    .rank{
+        width: 2.2ex;
+        margin-top: 15px;
+        color: #c6c6c6;
+        font-family: Arial;
+        font-size: 16px;
+        text-align: right;
+    }
+    .vote{
+        width: 6.1ex;
+        font-weight: bold;
+        margin: 0 7px;
+        .score{
+            text-align: center;
+            color: #c6c6c6;
+        }
+        &.unvoted{
+            .downvote, .upvote{
+                display: none;
+            }
+        }
+    }
+    .arrow{
+        margin: 2px 0px 0px 0px;
+        height: 14px;
+        display: block;
+        cursor: pointer;
+        width: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        outline: none;
+        background-position: center center;
+        background-repeat: no-repeat;
+        &.up{
+            background-image: url('../img/snoo-sprites.png');
+            background-position: -84px -1618px;
+        }
+        &.down{
+            background-image: url('../img/snoo-sprites.png');
+            background-position: -42px -1618px;
+        }
+    }
+    .thumb{
+        font-size: 0;
+        margin: 0 5px 2px 0;
+        overflow: hidden;
+        width: 70px;
+    }
+    .title{
+        color: #0000ff;
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 1px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    .domain{
+        color: #888;
+        font-size: 10px;
+        white-space: nowrap;
+        a{
+            color: #888;
+            display: inline-block;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            max-width: 19em;
+            &:hover{
+                text-decoration: underline;
+                max-width: none;
+            }
+        }
+    }
+    .details{
+        color: #888;
+        font-size: 10px;
+        line-height: 1em;
+        margin: 0;
+    }
+    ul.inline-list{
+        display: block;
+        padding: 1px 0;
+        list-style-type: none;
+        list-style: none;
+        li{
+            display: inline-block;
+            border: none;
+            padding-right: 4px;
+            line-height: 1.6em;
+            font-size: 10px;
+            a{
+                color: #888;
+                font-weight: bold;
+                padding: 0 1px;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
