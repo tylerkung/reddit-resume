@@ -13,6 +13,9 @@ a{
 p{
     margin: 0;
 }
+ul{
+    padding-left: 0px;
+}
 
 .header{
     width: 100%;
@@ -26,13 +29,98 @@ p{
         border-bottom: 1px solid gray;
         height: 18px;
         line-height: 18px;
+        font-size: 9px;
+        .dropdown-sr{
+            float: left;
+            padding-left: 5px;
+            cursor: default;
+            display: inline;
+            position: relative;
+            .my-sr{
+                display: inline-block;
+                vertical-align: bottom;
+                padding-right: 21px;
+                padding-left: 5px;
+                color: black;
+                font-weight: normal;
+                margin-left: -5px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+        .dropdown-options{
+            margin-top: 0px;
+            margin-left: 5px;
+            position: absolute;
+            left: 0px;
+            border: 1px solid gray;
+            z-index: 99;
+            background-color: #fff;
+            white-space: nowrap;
+            line-height: normal;
+            display: none;
+        }
+        .sr-menu{
+            overflow: hidden;
+            .flat-list{
+                list-style-type: none;
+                display: inline;
+                li{
+                    display: inline;
+                    white-space: nowrap;
+                    a{
+                        color: #000;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    &:not(:first-of-type):before{
+                        content: '- ';
+                    }
+                }
+            }
+        }
+        .separator{
+            color: gray;
+            margin: 0px 3px;
+        }
     }
     .left-header{
         .header-img{
             height: 40px;
-            width: 120px;
+            width: 135px;
             display: inline-block;
-            margin-bottom: 3px;
+            margin: 2px 5px 3px 0;
+            background-image: url(../img/snoo-sprites.png);
+            background-position: 0px -1323px;
+        }
+        line-height: 0;
+        .tab-menu{
+            list-style-type: none;
+            white-space: nowrap;
+            display: inline-block;
+            margin: 0 0 7px;
+            vertical-align: bottom;
+            list-style: none;
+            font-size: 12px;
+            padding: 0;
+            li{
+                display: inline;
+                font-weight: bold;
+                margin: 0px 3px;
+                a{
+                    padding: 2px 6px 0px 6px;
+                    background-color: #eff7ff;
+                }
+                &.selected{
+                    a{
+                        background-color: #fff;
+                        border: 1px solid #5f99cf;
+                        border-bottom: 1px solid #fff;
+                        color: #ff4500;
+                    }
+                }
+            }
         }
     }
     .right-header{

@@ -13,6 +13,9 @@ a:hover {
 p {
   margin: 0;
 }
+ul {
+  padding-left: 0px;
+}
 .header {
   width: 100%;
   background-color: #cee3f8;
@@ -26,12 +29,97 @@ p {
   border-bottom: 1px solid gray;
   height: 18px;
   line-height: 18px;
+  font-size: 9px;
+}
+.header .sr-header .dropdown-sr {
+  float: left;
+  padding-left: 5px;
+  cursor: default;
+  display: inline;
+  position: relative;
+}
+.header .sr-header .dropdown-sr .my-sr {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-right: 21px;
+  padding-left: 5px;
+  color: black;
+  font-weight: normal;
+  margin-left: -5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.header .sr-header .dropdown-options {
+  margin-top: 0px;
+  margin-left: 5px;
+  position: absolute;
+  left: 0px;
+  border: 1px solid gray;
+  z-index: 99;
+  background-color: #fff;
+  white-space: nowrap;
+  line-height: normal;
+  display: none;
+}
+.header .sr-header .sr-menu {
+  overflow: hidden;
+}
+.header .sr-header .sr-menu .flat-list {
+  list-style-type: none;
+  display: inline;
+}
+.header .sr-header .sr-menu .flat-list li {
+  display: inline;
+  white-space: nowrap;
+}
+.header .sr-header .sr-menu .flat-list li a {
+  color: #000;
+}
+.header .sr-header .sr-menu .flat-list li a:hover {
+  text-decoration: underline;
+}
+.header .sr-header .sr-menu .flat-list li:not(:first-of-type):before {
+  content: '- ';
+}
+.header .sr-header .separator {
+  color: gray;
+  margin: 0px 3px;
+}
+.header .left-header {
+  line-height: 0;
 }
 .header .left-header .header-img {
   height: 40px;
-  width: 120px;
+  width: 135px;
   display: inline-block;
-  margin-bottom: 3px;
+  margin: 2px 5px 3px 0;
+  background-image: url(../img/snoo-sprites.png);
+  background-position: 0px -1323px;
+}
+.header .left-header .tab-menu {
+  list-style-type: none;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0 0 7px;
+  vertical-align: bottom;
+  list-style: none;
+  font-size: 12px;
+  padding: 0;
+}
+.header .left-header .tab-menu li {
+  display: inline;
+  font-weight: bold;
+  margin: 0px 3px;
+}
+.header .left-header .tab-menu li a {
+  padding: 2px 6px 0px 6px;
+  background-color: #eff7ff;
+}
+.header .left-header .tab-menu li.selected a {
+  background-color: #fff;
+  border: 1px solid #5f99cf;
+  border-bottom: 1px solid #fff;
+  color: #ff4500;
 }
 .header .right-header {
   position: absolute;
