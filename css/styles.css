@@ -142,6 +142,9 @@ ul {
 .content {
   margin: 7px 15px 0px;
 }
+.post {
+  overflow: auto;
+}
 .post .rank,
 .post .vote,
 .post .thumb,
