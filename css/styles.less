@@ -1,4 +1,5 @@
 // out: ../css/styles.css, sourcemap: true, compress: true
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed');
 
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif, serif;
@@ -253,5 +254,26 @@ ul{
                 }
             }
         }
+    }
+}
+
+.building-template{
+    .container{
+        &:first-of-type{
+            margin-top: 4em;
+        }
+    }
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 4em;
+        padding-bottom: 0.5em;
+        margin-bottom: 0.25em;
+        border-bottom: 2px solid #000;
+    }
+    h2{
+        font-family: 'Playfair Display', serif;
+    }
+    h3, h4, h5, h6, p{
+        font-family: "Roboto Condensed", sans-serif;
     }
 }
