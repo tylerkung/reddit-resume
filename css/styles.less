@@ -1,5 +1,5 @@
 // out: ../css/styles.css, sourcemap: true, compress: true
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed|Quicksand');
 
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif, serif;
@@ -177,6 +177,16 @@ ul{
                 display: none;
             }
         }
+        &.upvoted{
+            .downvote, .novote{
+                display: none;
+            }
+        }
+        &.downvoted{
+            .upvote, .novote{
+                display: none;
+            }
+        }
     }
     .arrow{
         margin: 2px 0px 0px 0px;
@@ -192,10 +202,16 @@ ul{
         &.up{
             background-image: url('../img/snoo-sprites.png');
             background-position: -84px -1618px;
+            &.voted{
+                background-position: -105px -1618px;
+            }
         }
         &.down{
             background-image: url('../img/snoo-sprites.png');
             background-position: -42px -1618px;
+            &.voted{
+                background-position: -63px -1618px;
+            }
         }
     }
     .thumb{
@@ -306,5 +322,23 @@ ul{
     }
     h3, h4, h5, h6, p{
         font-family: "Roboto Condensed", sans-serif;
+    }
+}
+
+.default-template{
+    .container{
+        height: 100vh;
+        .row{
+            margin-top: 30vh;
+        }
+    }
+    h1{
+        font-family: "Quicksand", sans-serif;
+        background: linear-gradient(to bottom right, #F5DD29, #CF513D, #A86CC1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &::selection{
+            background: #FDC788;
+        }
     }
 }
