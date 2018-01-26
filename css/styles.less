@@ -333,13 +333,16 @@ ul{
 
 .default-template{
     .container{
-        height: 100vh;
-        .row{
-            margin-top: 30vh;
+        &.header{
+            width: auto;
+            height: 90vh;
+            .row{
+                margin-top: 30vh;
+            }
         }
     }
     .main-content{
-        max-width: 300px;
+        max-width: 350px;
         margin: 0 auto;
     }
     h1{
@@ -347,8 +350,36 @@ ul{
         background: linear-gradient(to bottom right, #F5DD29, #CF513D, #A86CC1);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        position: fixed;
         &::selection{
             background: #FDC788;
+        }
+    }
+    &.secondary{
+        .container.header{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            background: linear-gradient(#00897B, #80CBC4);
+        }
+        h1{
+            -webkit-text-fill-color: #fff;
+            color: #fff;
+            text-shadow: 1px 1px 0px #00695C,
+                         2px 2px 0px #00695C,
+                         3px 3px 0px #00695C;
+                         // 4px 4px 0px #00695C;
+             &::selection{
+                 background: #E0F2F1;
+             }
+
+        }
+        .main-wrapper{
+            position: absolute;
+            z-index: 2;
+            margin-top: 90vh;
+            width:100%;
+            background-color: #fff;
         }
     }
 }
