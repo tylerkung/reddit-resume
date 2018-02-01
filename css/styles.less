@@ -1,5 +1,13 @@
 // out: ../css/styles.css, sourcemap: true, compress: true
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed:300,700|Quicksand');
+@xxl: ~"(min-width: 1400px)";
+@xl: ~"(min-width: 1200px)";
+@lg: ~"(max-width: 1200px)";
+@gmd: ~"(min-width: 992px)";
+@md: ~"(max-width: 991px)";
+@sm: ~"(max-width: 767px)";
+@gsm: ~"(min-width: 768px)";
+@xs: ~"(max-width: 480px)";
 
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif, serif;
@@ -337,13 +345,12 @@ ul{
             width: auto;
             height: 90vh;
             .row{
-                margin-top: 30vh;
             }
         }
     }
     .main-content{
         max-width: 350px;
-        margin: 0 auto;
+        margin: 24vh auto 0;
     }
     h1{
         font-family: "Quicksand", sans-serif;
@@ -360,15 +367,40 @@ ul{
             position: absolute;
             z-index: 1;
             width: 100%;
-            background: linear-gradient(#00897B, #80CBC4);
+            // background: linear-gradient(#a3bded, #6991c7);
+            background: radial-gradient(circle, #1b6389 65%, transparent 100%);
+            background-attachment: fixed;
+        }
+        .top-header{
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            @media @gsm{
+                width: 750px;
+            }
+            @media @gmd{
+                width: 970px;
+            }
+            @media @xl{
+                width: 1170px;
+            }
+        }
+        span.logo{
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 300;
+            color: #fff;
+            font-size: 1.5em;
+            strong{
+
+            }
         }
         h1{
             -webkit-text-fill-color: #fff;
             color: #fff;
-            text-shadow: 1px 1px 0px #00695C,
-                         2px 2px 0px #00695C,
-                         3px 3px 0px #00695C;
-                         // 4px 4px 0px #00695C;
+            // text-shadow: 1px 1px 0px #00695C,
+            //              2px 2px 0px #00695C,
+            //              3px 3px 0px #00695C;
+            //              // 4px 4px 0px #00695C;
              &::selection{
                  background: #E0F2F1;
              }
