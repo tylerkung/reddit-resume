@@ -1,5 +1,6 @@
 // out: ../css/styles.css, sourcemap: true, compress: true
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed:300,700|Quicksand');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @xxl: ~"(min-width: 1400px)";
 @xl: ~"(min-width: 1200px)";
 @lg: ~"(max-width: 1200px)";
@@ -367,8 +368,8 @@ ul{
             position: absolute;
             z-index: 1;
             width: 100%;
-            // background: linear-gradient(#a3bded, #6991c7);
-            background: radial-gradient(circle, #1b6389 65%, transparent 100%);
+            background: linear-gradient(#a3bded, #6991c7);
+            // background: radial-gradient(circle, #1b6389 65%, transparent 100%);
             background-attachment: fixed;
         }
         .top-header{
@@ -404,7 +405,57 @@ ul{
              &::selection{
                  background: #E0F2F1;
              }
-
+        }
+        h3{
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #6991c7;
+            strong{
+                font-size: 26px;
+            }
+        }
+        p{
+            color: #6991c7;
+        }
+        span.date{
+            font-size: 14px;
+        }
+        .desktop-page{
+            margin-top: 20px;
+            background-image: url('../img/desktop.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 350px;
+            &.macbook{
+                background-image: url('../img/macbook.png');
+                width: 120%;
+                left: -10%;
+                position: relative;
+                .desktop-container{
+                    height: 229px;
+                    top: 18px;
+                    width: 368px;
+                }
+            }
+            .desktop-container{
+                height: 212px;
+                overflow: scroll;
+                top: 16px;
+                position: relative;
+                width: 376px;
+                margin: 0 auto;
+            }
+            img{
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                position: relative;
+                overflow: scroll;
+            }
+        }
+        .col-side{
+            .fa{
+                color: #6991c7;
+            }
         }
         .main-wrapper{
             position: absolute;
