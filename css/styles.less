@@ -344,7 +344,7 @@ ul{
     .container{
         &.header{
             width: auto;
-            height: 90vh;
+            height: 60vh;
             .row{
             }
         }
@@ -363,6 +363,9 @@ ul{
             background: #FDC788;
         }
     }
+    h2{
+        font-family: "Quicksand", sans-serif;
+    }
     &.secondary{
         .container.header{
             position: absolute;
@@ -373,7 +376,7 @@ ul{
             background-attachment: fixed;
         }
         .top-header{
-            margin: 0 auto;
+            margin: 30px auto;
             padding-left: 15px;
             padding-right: 15px;
             @media @gsm{
@@ -390,14 +393,19 @@ ul{
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 300;
             color: #fff;
-            font-size: 1.5em;
+            font-size: 3em;
             strong{
 
             }
         }
+        .main-content{
+            max-width: unset;
+        }
         h1{
             -webkit-text-fill-color: #fff;
             color: #fff;
+            text-align: center;
+            position: relative;
             // text-shadow: 1px 1px 0px #00695C,
             //              2px 2px 0px #00695C,
             //              3px 3px 0px #00695C;
@@ -420,6 +428,9 @@ ul{
             font-size: 14px;
         }
         .desktop-page{
+            @media @md{
+                display: none;
+            }
             margin-top: 20px;
             background-image: url('../img/desktop.png');
             background-size: contain;
@@ -460,9 +471,41 @@ ul{
         .main-wrapper{
             position: absolute;
             z-index: 2;
-            margin-top: 90vh;
+            margin-top: 60vh;
             width:100%;
             background-color: #fff;
         }
+        .row.project{
+            @media @md{
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .row.contact-me{
+            background-color: #6991c7;
+            color: #fff;
+            padding: 30px 0 80px;
+            h2{
+                font-size: 2.4em;
+                font-weight: bold;
+            }
+            p{
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.6em;
+                font-family: "Quicksand", sans-serif;
+            }
+        }
+    }
+}
+
+.mobile-only{
+    @media @gmd{
+        display: none !important;
     }
 }
