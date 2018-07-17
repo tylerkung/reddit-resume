@@ -87,7 +87,7 @@ body {
   }
 }
 .nav {
-  padding: 20px 0;
+  padding: 50px 0;
 }
 .nav i {
   color: #373d3f;
@@ -102,8 +102,8 @@ body {
   width: calc(100% + 20px);
   background-color: #a3b86c;
   left: -5px;
-  top: 12px;
-  height: 10px;
+  top: 10px;
+  height: 8px;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s cubic-bezier(0, 0.5, 0.5, 1);
@@ -115,7 +115,7 @@ body {
   transform: scaleX(1);
 }
 .nav a {
-  padding-left: 20px;
+  padding-right: 20px;
   display: inline-block;
 }
 .section {
