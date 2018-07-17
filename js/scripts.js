@@ -27,8 +27,17 @@ $(document).ready(function(){
         scale: 1,
         viewFactor: 0.2,
         easing: 'cubic-bezier(0,.5,.5,1)',
-        delay: 400,
-    }, 300);
+        delay: 200,
+    }, 200);
+    sr.reveal('.headshot',{
+        distance: '60px',
+        origin: 'top',
+        opacity: 0,
+        scale: 1,
+        viewFactor: 0.2,
+        easing: 'cubic-bezier(0,.5,.5,1)',
+        delay: 1000,
+    })
     sr.reveal('.section-number', fadeUp);
     sr.reveal('.lead-paragraph', {
         distance: '5px',
