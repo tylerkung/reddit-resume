@@ -129,6 +129,7 @@ body {
 }
 .nav {
   padding: 20px 0;
+  text-align: right;
 }
 .nav i {
   color: #373d3f;
@@ -156,7 +157,7 @@ body {
   transform: scaleX(1);
 }
 .nav a {
-  padding-right: 20px;
+  padding-left: 20px;
   display: inline-block;
 }
 @media (min-width: 980px) {
@@ -172,12 +173,12 @@ body {
   }
 }
 .headshot {
-  width: 150px;
+  width: 120px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: #a3b86c;
-  padding-top: 15%;
+  padding-top: 10%;
 }
 .headshot img {
   width: 100%;
@@ -186,6 +187,12 @@ body {
 }
 .headshot:hover img {
   transform: scale(1.1);
+}
+@media (min-width: 980px) {
+  .headshot {
+    width: 150px;
+    padding-top: 15%;
+  }
 }
 .section {
   padding-bottom: 40px;
@@ -444,6 +451,70 @@ body {
     font-size: 36px;
     font-size: 3.6rem;
   }
+}
+.gallery-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 180px 180px 180px;
+  min-height: 0;
+  /* NEW */
+  min-width: 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 980px) {
+  .gallery-items {
+    grid-template-rows: repeat(4, 300px);
+  }
+  .gallery-items .gallery-item {
+    grid-row: span 1;
+    grid-column: span 3;
+  }
+}
+.primary {
+  grid-area: primary;
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.primary img {
+  filter: grayscale(0%) !important;
+}
+.secondary {
+  grid-area: secondary;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.gallery-item {
+  overflow: hidden;
+  position: relative;
+}
+.gallery-item img {
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.4s cubic-bezier(0, 0.5, 0.5, 1);
+}
+.gallery-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+.gallery-item:hover .gallery-header {
+  transform: translateY(0px);
+}
+.gallery-item .gallery-header {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 100%;
+  padding: 10px 10px;
+  text-align: right;
+  text-shadow: -2px 4px 20px #000;
+  transform: translateY(-50px);
+  transition: all 0.4s cubic-bezier(0, 0.5, 0.5, 1);
 }
 @keyframes fadeUp {
   0% {

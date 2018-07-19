@@ -63,6 +63,15 @@ $(document).ready(function(){
             $(domEl).addClass("animate");
         }
     }, 700);
+    sr.reveal('.gallery-item',{
+        distance: '20px',
+        origin: 'bottom',
+        opacity: 0,
+        scale: 1,
+        viewFactor: 0.9,
+        easing: 'cubic-bezier(0,.5,.5,1)',
+        duration: 400,
+    },500);
     var skillVal = fadeUp;
     sr.reveal('.skill-col h3', fadeUp, 200);
     sr.reveal('.skill-col .skill', {
