@@ -18,10 +18,13 @@ body{
     background-color: #fffffa;
     font-family: "KotoriRose", "Helvetica Neue", Helvetica, Arial, sans-serif;
     height: 100%;
+    margin: 0;
 }
 .container{
+    padding: 0 20px;
     @media @gmd{
         width: 800px;
+        margin: 0 auto;
     }
 }
 .header{
@@ -353,7 +356,7 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
 
     grid-template-rows: 180px 180px 180px;
-    // grid-template-areas: "primary primary ." ". secondary secondary" ". . .";
+    // grid-template-areas: "wide wide ." ". secondary secondary" ". . .";
     min-height: 0;  /* NEW */
     min-width: 0;
     overflow: hidden;
@@ -365,8 +368,16 @@ body{
         }
     }
 }
-.primary{
+.main-grid{
     grid-area: primary;
+    grid-column: span 3;
+    grid-row: span 2;
+    img{
+        filter: grayscale(0%) !important;
+    }
+}
+.wide{
+    grid-area: wide;
     grid-column: span 2;
     grid-row: span 1;
     img{
