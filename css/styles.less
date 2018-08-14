@@ -355,7 +355,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    grid-template-rows: 180px 180px 180px;
+    grid-template-rows: 180px 180px 180px 180px;
     // grid-template-areas: "wide wide ." ". secondary secondary" ". . .";
     min-height: 0;  /* NEW */
     min-width: 0;
@@ -398,6 +398,7 @@ body{
     position: relative;
     img{
         width: 100%;
+        min-height: 100%;
         object-fit: cover;
         filter: grayscale(100%);
         transition: all 0.4s cubic-bezier(0,.5,.5,1);
