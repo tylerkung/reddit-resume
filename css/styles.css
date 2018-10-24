@@ -76,6 +76,10 @@ a {
   color: #3c6478;
   text-decoration: none !important;
 }
+ul li {
+  color: #707c80;
+  margin-bottom: 5px;
+}
 @media screen and (max-width: 980px) {
   h1 {
     font-size: 100px;
